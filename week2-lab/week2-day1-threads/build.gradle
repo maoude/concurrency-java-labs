@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JUnit 5 (Platform + Jupiter)
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly  'org.junit.jupiter:junit-jupiter-engine'
+    testRuntimeOnly  'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging { events "passed", "skipped", "failed" }
+}
+
+application {
+    mainClass = 'edu.lu.concurrency.week2.day1.part1_basics.Demo01_ThreadVsRunnable'
+}
+
+tasks.register('runDemo04', JavaExec) {
+    group = 'demos'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'edu.lu.concurrency.week2.day1.part1_basics.Demo04_Interleaving'
+}
+
+tasks.register('runDemo09', JavaExec) {
+    group = 'demos'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'edu.lu.concurrency.week2.day1.part2_lifecycle.Demo09_PriorityExperiment'
+}

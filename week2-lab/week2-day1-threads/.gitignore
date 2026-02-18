@@ -1,0 +1,32 @@
+﻿# =========================
+# Gradle
+# =========================
+.gradle/
+build/
+gradle/
+
+# Wrapper binaries (will be regenerated)
+gradlew
+gradlew.bat
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# JDK artifacts
+hs_err_pid*
+replay_pid*
+
+# Test output
+test-results/
+
+# Misc
+*.class

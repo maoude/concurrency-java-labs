@@ -1,0 +1,4 @@
+- [ ] I can explain why run() does not create a new thread.
+- [ ] I can explain interleaving and nondeterminism.
+- [ ] I can distinguish BLOCKED vs WAITING vs TIMED_WAITING.
+- [ ] I understand that priority is a hint, not a guarantee.
