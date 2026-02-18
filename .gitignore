@@ -1,0 +1,32 @@
+﻿# =========================
+# Gradle
+# =========================
+.gradle/
+build/
+gradle/
+
+# Wrapper binaries
+gradlew
+gradlew.bat
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Compiled classes
+*.class
+
+# Test output
+test-results/
+
+# Crash logs
+hs_err_pid*
+replay_pid*
