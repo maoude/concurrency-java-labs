@@ -15,4 +15,13 @@ public final class Console {
             System.out.println("[VERBOSE] " + message);
         }
     }
+
+    public static void hr(String title) {
+    System.out.println();
+    System.out.println("==================================================");
+    System.out.println(title);
+    System.out.println("==================================================");
+    }
+
+
 }
