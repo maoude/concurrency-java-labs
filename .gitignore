@@ -5,10 +5,6 @@
 build/
 gradle/
 
-# Wrapper binaries
-gradlew
-gradlew.bat
-
 # Logs
 *.log
 
