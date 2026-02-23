@@ -32,3 +32,13 @@ tasks.named('run') {
     mainClass.set(project.property('main').toString())
   }
 }
+
+
+dependencies {
+  testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+}
+
+
+test {
+  useJUnitPlatform()
+}
