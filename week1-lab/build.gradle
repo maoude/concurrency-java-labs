@@ -13,7 +13,22 @@ java {
 }
 
 application {
+  // default main
   mainClass = "edu.lu.concurrency.week1.lab1.AmdahlCalculator"
 }
 
+tasks.named("run") {
+  // allow: ./gradlew run -Pmain=fully.qualified.ClassName
+  if (project.hasProperty("main")) {
+    mainClass.set(project.property("main").toString())
+  }
+}
+
+
 tasks.withType(JavaCompile).configureEach { options.encoding = "UTF-8" }
+
+tasks.named('run') {
+  if (project.hasProperty('main')) {
+    mainClass.set(project.property('main').toString())
+  }
+}
