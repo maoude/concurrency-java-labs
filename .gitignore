@@ -1,9 +1,15 @@
 ﻿# =========================
 # Gradle
 # =========================
+# Gradle
 .gradle/
 build/
-gradle/
+
+# Ignore all of gradle EXCEPT wrapper
+gradle/*
+!gradle/wrapper/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
 
 # Logs
 *.log
