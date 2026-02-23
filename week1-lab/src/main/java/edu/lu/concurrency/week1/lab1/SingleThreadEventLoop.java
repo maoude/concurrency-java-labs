@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.concurrent.CountDownLatch;
@@ -69,3 +71,4 @@ public class SingleThreadEventLoop {
         System.out.println("Average latency: " + (p95Tracker / (double) processed) + " ms");
     }
 }
+

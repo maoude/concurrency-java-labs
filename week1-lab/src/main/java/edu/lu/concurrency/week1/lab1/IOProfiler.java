@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 // IOProfiler.java
 
 import java.lang.management.ManagementFactory;
@@ -62,11 +64,11 @@ public class IOProfiler {
     /**
      * Thread pool sizing formula from lecture:
      *
-     * OptimalThreads = cores × (1 + wait/compute)
+     * OptimalThreads = cores Ã— (1 + wait/compute)
      *
      * Intuition:
-     * - If wait >> compute → large pool
-     * - If compute >> wait → near core count
+     * - If wait >> compute â†’ large pool
+     * - If compute >> wait â†’ near core count
      */
     public static int recommendPoolSize(long waitMs, long computeMs) {
 
@@ -126,3 +128,4 @@ public class IOProfiler {
         });
     }
 }
+

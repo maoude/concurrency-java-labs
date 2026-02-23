@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
@@ -153,3 +155,4 @@ public class CPUBoundServer {
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
+

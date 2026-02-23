@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 // LoadClient.java
 // Sends concurrent HTTP requests to localhost:8080
 // Used to demonstrate queue formation in single-threaded server
@@ -59,3 +61,4 @@ public class LoadClient {
         System.out.println("Total Time: " + (globalEnd - globalStart) + " ms");
     }
 }
+

@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 public class AutoTuner {
     /**
      * Automatically find optimal thread pool size
@@ -26,7 +28,7 @@ public class AutoTuner {
             // 6. Track best poolSize
             
             double p95 = runExperiment(poolSize, targetClients, requestsPerClient);
-            System.out.printf("Pool size %d → p95 latency: %.2f ms%n", poolSize, p95);
+            System.out.printf("Pool size %d â†’ p95 latency: %.2f ms%n", poolSize, p95);
             
             if (p95 < bestP95) {
                 bestP95 = p95;
@@ -34,7 +36,7 @@ public class AutoTuner {
             }
         }
         
-        System.out.printf("\n✅ Optimal pool size: %d (p95: %.2f ms)%n", 
+        System.out.printf("\nâœ… Optimal pool size: %d (p95: %.2f ms)%n", 
             bestPoolSize, bestP95);
         return bestPoolSize;
     }
@@ -56,3 +58,4 @@ public class AutoTuner {
         );
     }
 }
+

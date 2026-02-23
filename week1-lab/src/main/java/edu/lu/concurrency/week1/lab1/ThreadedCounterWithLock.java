@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ThreadedCounterWithLock {
@@ -39,3 +41,4 @@ public class ThreadedCounterWithLock {
         System.out.println("Throughput: " + throughput + " ops/sec");
     }
 }
+

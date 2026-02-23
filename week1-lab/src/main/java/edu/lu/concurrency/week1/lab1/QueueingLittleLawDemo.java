@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -36,3 +38,4 @@ public class QueueingLittleLawDemo {
         System.out.println("Remaining in queue: " + queue.size());
     }
 }
+

@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 import java.io.OutputStream;
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -127,3 +129,4 @@ public class MultiThreadedServer {
         }
     }
 }
+

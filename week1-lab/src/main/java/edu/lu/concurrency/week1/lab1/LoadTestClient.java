@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
@@ -302,3 +304,4 @@ public class LoadTestClient {
         }
     }
 }
+

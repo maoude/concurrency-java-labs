@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 // SingleThreadedServer.java
 // Demonstrates a blocking, sequential server architecture.
 // Used to illustrate I/O-bound bottlenecks and queue formation.
@@ -79,3 +81,4 @@ public class SingleThreadedServer {
         }
     }
 }
+

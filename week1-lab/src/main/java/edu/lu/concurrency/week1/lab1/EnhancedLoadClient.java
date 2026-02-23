@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
@@ -185,3 +187,4 @@ public class EnhancedLoadClient {
         return m;
     }
 }
+

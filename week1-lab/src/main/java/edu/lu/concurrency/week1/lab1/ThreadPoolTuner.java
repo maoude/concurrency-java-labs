@@ -1,13 +1,15 @@
+package edu.lu.concurrency.week1.lab1;
+
 /**
  * ThreadPoolTuner
  *
  * Implements the lecture formula:
  *
- *   OptimalThreads = Cores × (1 + WaitTime / ComputeTime)
+ *   OptimalThreads = Cores Ã— (1 + WaitTime / ComputeTime)
  *
  * Derived from:
  *   - Little's intuition (overlapping waiting)
- *   - Amdahl’s limit (CPU-bound ceiling)
+ *   - Amdahlâ€™s limit (CPU-bound ceiling)
  *
  * This is a heuristic, not a law.
  * It assumes:
@@ -47,11 +49,11 @@ public class ThreadPoolTuner {
         // -----------------------------
         // Core formula
         // -----------------------------
-        // optimal = cores × (1 + wait/compute)
+        // optimal = cores Ã— (1 + wait/compute)
         //
         // Interpretation:
-        // - If wait is large → many threads useful
-        // - If wait is small → near cores only
+        // - If wait is large â†’ many threads useful
+        // - If wait is small â†’ near cores only
         double ratio = (double) waitTimeMs / computeTimeMs;
 
         double rawOptimal = CORES * (1.0 + ratio);
@@ -96,11 +98,11 @@ public class ThreadPoolTuner {
         int recommended1 = recommendPoolSize(wait1, compute1);
 
         System.out.printf(
-                "Scenario 1 (Heavy I/O): %dms wait, %dms compute → Pool size: %d%n",
+                "Scenario 1 (Heavy I/O): %dms wait, %dms compute â†’ Pool size: %d%n",
                 wait1, compute1, recommended1);
 
         // Interpretation:
-        // Large wait/compute ratio → many threads beneficial
+        // Large wait/compute ratio â†’ many threads beneficial
 
         // -------------------------------------------------
         // Scenario 2: Balanced Workload
@@ -111,11 +113,11 @@ public class ThreadPoolTuner {
         int recommended2 = recommendPoolSize(wait2, compute2);
 
         System.out.printf(
-                "Scenario 2 (Balanced): %dms wait, %dms compute → Pool size: %d%n",
+                "Scenario 2 (Balanced): %dms wait, %dms compute â†’ Pool size: %d%n",
                 wait2, compute2, recommended2);
 
         // Interpretation:
-        // Ratio = 1 → roughly 2 × cores
+        // Ratio = 1 â†’ roughly 2 Ã— cores
 
         // -------------------------------------------------
         // Scenario 3: CPU-bound
@@ -126,15 +128,16 @@ public class ThreadPoolTuner {
         int recommended3 = recommendPoolSize(wait3, compute3);
 
         System.out.printf(
-                "Scenario 3 (CPU-bound): %dms wait, %dms compute → Pool size: %d%n",
+                "Scenario 3 (CPU-bound): %dms wait, %dms compute â†’ Pool size: %d%n",
                 wait3, compute3, recommended3);
 
         // Interpretation:
-        // Small wait ratio → near core count
+        // Small wait ratio â†’ near core count
 
         System.out.println("\nKey Insight:");
-        System.out.println(" - Heavy I/O → Larger pools make sense.");
-        System.out.println(" - CPU-bound → Pool ≈ number of cores.");
+        System.out.println(" - Heavy I/O â†’ Larger pools make sense.");
+        System.out.println(" - CPU-bound â†’ Pool â‰ˆ number of cores.");
         System.out.println(" - More threads than cores does NOT mean more speed.");
     }
 }
+

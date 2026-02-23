@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 public class AmdahlCalculator {
 
     /**
@@ -50,7 +52,7 @@ public class AmdahlCalculator {
         for (int cores : coreCounts) {
             if (cores == Integer.MAX_VALUE) {
                 // Symbolic representation of infinite cores
-                System.out.printf("%-12s", "∞ cores");
+                System.out.printf("%-12s", "âˆž cores");
             } else {
                 System.out.printf("%-12s", cores + " cores");
             }
@@ -68,7 +70,7 @@ public class AmdahlCalculator {
 
                 // Replace "infinite cores" with a very large number.
                 // This approximates the theoretical limit:
-                // Speedup → 1 / (1 - P)
+                // Speedup â†’ 1 / (1 - P)
                 int effectiveCores = (cores == Integer.MAX_VALUE) ? 1_000_000 : cores;
 
                 // Compute theoretical speedup
@@ -90,8 +92,9 @@ public class AmdahlCalculator {
          * 3) The plateau equals 1 / (1 - P).
          *
          * This demonstrates:
-         *   More cores ≠ infinite scaling.
+         *   More cores â‰  infinite scaling.
          *   The sequential part limits everything.
          */
     }
 }
+

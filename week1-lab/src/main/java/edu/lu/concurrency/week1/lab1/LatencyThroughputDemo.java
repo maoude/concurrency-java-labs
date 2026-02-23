@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 // LatencyThroughputDemo.java
 import java.util.*;
 import java.util.concurrent.*;

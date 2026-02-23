@@ -1,3 +1,5 @@
+package edu.lu.concurrency.week1.lab1;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
