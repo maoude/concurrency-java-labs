@@ -1,7 +1,7 @@
-﻿# =========================
-# Gradle
+﻿@"
 # =========================
 # Gradle
+# =========================
 .gradle/
 build/
 
@@ -10,6 +10,14 @@ gradle/*
 !gradle/wrapper/
 !gradle/wrapper/gradle-wrapper.jar
 !gradle/wrapper/gradle-wrapper.properties
+
+# Compiled output folders (yours exists)
+bin/
+*.class
+
+# Bench / generated artifacts
+results/
+test-results/
 
 # Logs
 *.log
@@ -23,12 +31,7 @@ Thumbs.db
 .vscode/
 *.iml
 
-# Compiled classes
-*.class
-
-# Test output
-test-results/
-
 # Crash logs
 hs_err_pid*
 replay_pid*
+"@ | Set-Content -Path ".\.gitignore" -Encoding UTF8
