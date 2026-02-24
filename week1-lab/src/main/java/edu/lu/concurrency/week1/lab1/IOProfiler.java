@@ -71,17 +71,8 @@ public class IOProfiler {
      * - If compute >> wait â†’ near core count
      */
     public static int recommendPoolSize(long waitMs, long computeMs) {
-
-        if (computeMs <= 0) {
-            return CORES; // fallback
-        }
-
-        double ratio = (double) waitMs / computeMs;
-
-        double optimal =
-                CORES * (1 + ratio);
-
-        return (int) Math.round(optimal);
+        // Delegate to validated implementation (throws IllegalArgumentException on bad inputs)
+        return ThreadPoolTuner.recommendPoolSize(waitMs, computeMs);
     }
 
     /**
